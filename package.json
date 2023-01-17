@@ -1,0 +1,25 @@
+{
+  "name": "twitter-node",
+  "version": "1.0.0",
+  "description": "This is Twitter with Node JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrowxgoutam/twitter-node-js.git"
+  },
+  "author": "Arrowx Goutam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arrowxgoutam/twitter-node-js/issues"
+  },
+  "homepage": "https://github.com/arrowxgoutam/twitter-node-js#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  }
+}
