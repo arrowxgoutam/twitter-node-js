@@ -4,12 +4,21 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const User = require('../../schemas/UserSchema');
 const Post = require('../../schemas/PostSchema');
+const { populate } = require('../../schemas/UserSchema');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
 router.get("/", (req, res, next) => {
 
-    res.status(200).render("login");
+    Post.find()
+    .populate("postedBy")
+    .then(results => res.status(200).send(results))
+    .catch( error => {
+        console.log(error);
+        res.sendStatus(400);
+    })
+
+    // res.status(200).render("login");
 });
 
 router.post("/", async (req, res, next) => {

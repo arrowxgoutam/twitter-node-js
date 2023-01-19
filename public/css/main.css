@@ -5,6 +5,7 @@
     --blue: #1fa2f1;
     --blueLight: #9bd1f9;
     --buttonHoberbg:#1fa2f150;
+    --greyText:rgba(101, 119, 134, 0.8);
 
     --spacing:15px;
 }
@@ -129,4 +130,46 @@ nav a:hover{
 }
 .postHeader a{
     color: var(--blue);
+    font-weight: bold;
+}
+.postHeader a:hover{
+    text-decoration: underline;
+}
+.username{
+    color: var(--greyText);
+    padding: 0 5px;
+}
+.date{
+    color: var(--greyText);
+    font-size: 12px;
+}
+.postFooter{
+    display:flex;
+    align-items: center;
+
+}
+.postFooter .postButtonContainer{
+    flex: 1;
+    display: flex;
+}
+.postFooter .postButtonContainer button{
+    background: transparent;
+    color: #00000034;
+    border: none;
+    padding: 0 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+.postFooter .postButtonContainer button:hover{
+    background: #d4edff;
+    color: var(--blue);
+    border-radius: 50%;
+}
+
+.noResults{
+    padding: var(--spacing);
 }
