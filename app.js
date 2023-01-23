@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = 8000;
 const middleware = require('./middleware');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -8,7 +8,7 @@ const mongoose = require('./database');
 const session = require('express-session');
 
 
-const server = app.listen(port, () => console.log("Server Listening on port" + port));
+const server = app.listen(PORT, () => console.log("Server Listening on port" + PORT));
 
 app.set("view engine", "pug");
 app.set("views", "views");
